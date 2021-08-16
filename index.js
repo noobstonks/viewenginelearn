@@ -14,6 +14,11 @@ app.get ('/', (req, res)=>{
       console.log("server nyala")
   })
 
-
+app.get('/greet', (req,res)=>{
+    const name = req.query.name || 'void'
+    res.render('greet', {
+        name
+    })
+})
 
 
